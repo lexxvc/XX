@@ -1,0 +1,8 @@
+Hallazgo,Resultado
+Tasa de abandono institucional,32.1% del total de estudiantes
+Perfil de mayor riesgo,Alto riesgo académico — 82.8% abandono
+Modelo con mejor balance para abandono,Random Forest
+Accuracy del mejor modelo,88.0%
+Variable más importante en Random Forest,Curricular units 2nd sem (approved)
+Modelos supervisados evaluados,Red Neuronal y Random Forest
+Perfiles exploratorios identificados,3 perfiles mediante K-Means

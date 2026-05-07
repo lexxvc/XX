@@ -1,0 +1,4 @@
+Cluster_Name,Estudiantes,Tasa_Desercion,Edad_Promedio,Calificacion_1er_Sem,Calificacion_2do_Sem,Materias_Aprobadas_1,Materias_Aprobadas_2,Pct_Deudores,Pct_Becados,Desercion_%
+Alto riesgo académico,870,0.828,26.091,2.133,0.633,0.408,0.093,0.195,0.097,82.8
+Riesgo bajo,3265,0.193,22.03,12.733,12.574,5.255,5.119,0.089,0.301,19.3
+Riesgo intermedio,289,0.249,28.716,12.618,12.638,11.45,9.785,0.145,0.114,24.9
