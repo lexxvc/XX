@@ -47,43 +47,75 @@ CLUSTER_COLORS = {
 }
 
 # ─────────────────────────────────────────────
-# ESTILO CUSTOM
+# ESTILO CUSTOM - AZUL GRISÁCEO (SLATE)
 # ─────────────────────────────────────────────
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Mono&display=swap');
 
-html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
+html, body, [class*="css"] { 
+    font-family: 'DM Sans', sans-serif; 
+}
 
+/* Fondo principal de las tarjetas (Azul Grisáceo) */
 .metric-card {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    border: 1px solid rgba(46,134,171,0.3);
+    background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
+    border: 1px solid rgba(148, 163, 184, 0.2);
     border-radius: 12px;
     padding: 20px 24px;
     text-align: center;
     color: white;
     margin-bottom: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
-.metric-card .value { font-size: 2.2rem; font-weight: 700; color: #2E86AB; }
-.metric-card .label { font-size: 0.85rem; color: #adb5bd; margin-top: 4px; }
-.metric-card .delta { font-size: 0.8rem; color: #3BB273; margin-top: 2px; }
 
-.risk-high   { background: linear-gradient(135deg, #4a0010, #6b0020); border-left: 4px solid #E84855; border-radius: 8px; padding: 16px; margin: 6px 0; color: white; }
-.risk-medium { background: linear-gradient(135deg, #4a3000, #6b4500); border-left: 4px solid #F4A261; border-radius: 8px; padding: 16px; margin: 6px 0; color: white; }
-.risk-low    { background: linear-gradient(135deg, #003020, #004030); border-left: 4px solid #3BB273; border-radius: 8px; padding: 16px; margin: 6px 0; color: white; }
+.metric-card .value { 
+    font-size: 2.2rem; 
+    font-weight: 700; 
+    color: #94a3b8; /* Azul grisáceo claro para el valor */
+}
+
+.metric-card .label { 
+    font-size: 0.85rem; 
+    color: #cbd5e1; 
+    margin-top: 4px; 
+}
+
+/* Ajuste de colores para alertas sobre fondo grisáceo */
+.risk-high { 
+    background: linear-gradient(135deg, #7f1d1d, #450a0a); 
+    border-left: 4px solid #f87171; 
+    border-radius: 8px; padding: 16px; margin: 6px 0; color: white; 
+}
+.risk-medium { 
+    background: linear-gradient(135deg, #78350f, #451a03); 
+    border-left: 4px solid #fbbf24; 
+    border-radius: 8px; padding: 16px; margin: 6px 0; color: white; 
+}
+.risk-low { 
+    background: linear-gradient(135deg, #064e3b, #022c22); 
+    border-left: 4px solid #34d399; 
+    border-radius: 8px; padding: 16px; margin: 6px 0; color: white; 
+}
 
 .section-title {
-    font-size: 1.5rem; font-weight: 700;
-    color: #2E86AB; margin-bottom: 4px;
-    border-bottom: 2px solid rgba(46,134,171,0.2);
+    font-size: 1.5rem; 
+    font-weight: 700;
+    color: #64748b; 
+    margin-bottom: 4px;
+    border-bottom: 2px solid rgba(100, 116, 139, 0.2);
     padding-bottom: 8px;
 }
 
-[data-testid="stSidebar"] { background: #0f0f1a; }
-[data-testid="stSidebar"] * { color: #e0e0e0 !important; }
+/* Sidebar en azul grisáceo muy oscuro */
+[data-testid="stSidebar"] { 
+    background-color: #0f172a; 
+}
+[data-testid="stSidebar"] * { 
+    color: #f1f5f9 !important; 
+}
 </style>
 """, unsafe_allow_html=True)
-
 
 # ─────────────────────────────────────────────
 # CARGA Y CACHÉ DE DATOS / MODELOS
