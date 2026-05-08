@@ -53,66 +53,59 @@ st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Mono&display=swap');
 
-html, body, [class*="css"] { 
-    font-family: 'DM Sans', sans-serif; 
+/* 1. FONDO DE TODA LA APP */
+.stApp {
+    background-color: #1e293b; /* Azul grisáceo oscuro (Slate 800) */
 }
 
-/* Fondo principal de las tarjetas (Azul Grisáceo) */
+html, body, [class*="css"] { 
+    font-family: 'DM Sans', sans-serif; 
+    color: #f1f5f9; 
+}
+
+/* 2. TARJETAS DE MÉTRICAS (Un poco más claras que el fondo para que contrasten) */
 .metric-card {
-    background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
-    border: 1px solid rgba(148, 163, 184, 0.2);
+    background: #334155; /* Slate 700 */
+    border: 1px solid rgba(148, 163, 184, 0.1);
     border-radius: 12px;
     padding: 20px 24px;
     text-align: center;
     color: white;
     margin-bottom: 8px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
 }
 
 .metric-card .value { 
     font-size: 2.2rem; 
     font-weight: 700; 
-    color: #94a3b8; /* Azul grisáceo claro para el valor */
+    color: #38bdf8; /* Un celeste brillante para resaltar números */
 }
 
 .metric-card .label { 
     font-size: 0.85rem; 
-    color: #cbd5e1; 
+    color: #94a3b8; 
     margin-top: 4px; 
 }
 
-/* Ajuste de colores para alertas sobre fondo grisáceo */
-.risk-high { 
-    background: linear-gradient(135deg, #7f1d1d, #450a0a); 
-    border-left: 4px solid #f87171; 
-    border-radius: 8px; padding: 16px; margin: 6px 0; color: white; 
-}
-.risk-medium { 
-    background: linear-gradient(135deg, #78350f, #451a03); 
-    border-left: 4px solid #fbbf24; 
-    border-radius: 8px; padding: 16px; margin: 6px 0; color: white; 
-}
-.risk-low { 
-    background: linear-gradient(135deg, #064e3b, #022c22); 
-    border-left: 4px solid #34d399; 
-    border-radius: 8px; padding: 16px; margin: 6px 0; color: white; 
-}
-
+/* 3. TÍTULOS DE SECCIÓN */
 .section-title {
     font-size: 1.5rem; 
     font-weight: 700;
-    color: #64748b; 
-    margin-bottom: 4px;
-    border-bottom: 2px solid rgba(100, 116, 139, 0.2);
+    color: #f1f5f9; 
+    margin-bottom: 12px;
+    border-bottom: 2px solid #334155;
     padding-bottom: 8px;
 }
 
-/* Sidebar en azul grisáceo muy oscuro */
+/* 4. SIDEBAR (Más oscuro para dar profundidad) */
 [data-testid="stSidebar"] { 
-    background-color: #0f172a; 
+    background-color: #0f172a !important; 
 }
-[data-testid="stSidebar"] * { 
-    color: #f1f5f9 !important; 
+
+/* Ajuste de color para inputs y widgets para que sean legibles */
+.stTextInput > div > div > input {
+    background-color: #334155;
+    color: white;
 }
 </style>
 """, unsafe_allow_html=True)
