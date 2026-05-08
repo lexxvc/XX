@@ -21,10 +21,10 @@ st.set_page_config(
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUTS = root / "outputs"
-FIGURES = outputs / "figures"
-TABLES = outputs / "tables"
-MODELS = outputs / "models"
+OUTPUTS = ROOT / "outputs"
+FIGURES = OUTPUTS / "figures"
+TABLES = OUTPUTS / "tables"
+MODELS = OUTPUTS / "models"
 
 
 def load_csv(name: str) -> pd.DataFrame:
