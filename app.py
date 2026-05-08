@@ -20,7 +20,7 @@ st.set_page_config(
 )
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = /
 OUTPUTS = ROOT / "outputs"
 FIGURES = OUTPUTS / "figures"
 TABLES = OUTPUTS / "tables"
